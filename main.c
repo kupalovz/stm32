@@ -9,7 +9,7 @@ void print_bin8(uint8_t v)
 }
 
 uint8_t set_bit(uint8_t reg, uint8_t n) {return reg | (1U << n);}
-uint8_t clear_bit(uint8_t reg, uint8_t n) {return reg & (1U << n);}
+uint8_t clear_bit(uint8_t reg, uint8_t n) {return reg & ~(1U << n);}
 uint8_t toggle_bit(uint8_t reg, uint8_t n) {return reg ^ (1U << n);}
 uint8_t check_bit(uint8_t reg, uint8_t n)  {reg & (1U << n);}
     int main(void)
